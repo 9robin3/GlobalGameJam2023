@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     GameState currentGameState;
+    SelectionState selectionState;
 
     
 
@@ -17,7 +18,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        selectionState = new SelectionState();
+        changeState(selectionState);
+
     }
 
     // Update is called once per frame
