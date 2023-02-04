@@ -17,6 +17,10 @@ public class HexGrid : MonoBehaviour
         for (int i = 0; i < sizeX; i++)
         {
             hexCells[i] = new HexCell[sizeY];
+            for (int j = 0; j < sizeY; j++)
+            {
+                hexCells[i][j] = new HexCell();
+            }
         }
     }
 
