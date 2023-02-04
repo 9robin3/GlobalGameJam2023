@@ -5,7 +5,7 @@ using Settworks.Hexagons;
 
 public class Hex : MonoBehaviour
 {
-    HexCoord hexCoord { }
+    public HexCoord hexCoord { get; set; }
 
     public Sprite background;
 
@@ -19,5 +19,12 @@ public class Hex : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public IEnumerable<HexCoord> Neighbors()
+    {
+
+        IEnumerable<HexCoord> result = hexCoord.Neighbors();
+        return result;
     }
 }
