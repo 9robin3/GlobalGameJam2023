@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class Event : GameState
 {
-    GameState currentGameState;
-
-
-    void changeState(GameState newGameState)
+    public void GameStateStart()
     {
-        currentGameState = newGameState;
-        currentGameState.GameStateStart();
+        throw new System.NotImplementedException();
+    }
+
+    public void GameStateUpdate()
+    {
+        throw new System.NotImplementedException();
     }
 
     // Start is called before the first frame update
@@ -22,6 +23,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentGameState.GameStateUpdate();
+        
     }
 }
