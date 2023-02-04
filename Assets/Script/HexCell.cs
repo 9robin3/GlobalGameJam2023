@@ -11,8 +11,17 @@ public class HexCell : MonoBehaviour
 
     public float size;
 
+    public GameObject background;
+
+    public Hex hex;
+
     public HexCell()
     {
         hexSides = new HexSide[6];
+    }
+
+    private void Start()
+    {
+        
     }
 }

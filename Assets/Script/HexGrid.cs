@@ -26,7 +26,7 @@ public class HexGrid : MonoBehaviour
     {
         //Destroy old cells
         HexCell[] tempCells = FindObjectsOfType<HexCell>();
-
+        Debug.Log(tempCells.Length);
         for (int i = 0; i < tempCells.Length; i++)
         {
             DestroyImmediate(tempCells[i]);
@@ -50,6 +50,7 @@ public class HexGrid : MonoBehaviour
                     for (int k = 0; k < tempGrids[i].sizeY; k++)
                     {
                         tempGrids[i].hexCells[j][k] = Instantiate(tempGrids[i].defaultHexCell, tempGrids[i].transform);
+                        Instantiate(tempGrids[i].hexCells[j][k].background, tempGrids[i].hexCells[j][k].transform);
                         tempGrids[i].hexCells[j][k].transform.localPosition = GivePosition(j, k, tempGrids[i].hexCells[j][k].size);
                     }
                 }
@@ -61,6 +62,15 @@ public class HexGrid : MonoBehaviour
     static Vector3 GivePosition(float x, float y, float size)
     {
         Vector3 result = new Vector3();
+
+        result.x = x * size;
+        result.y = y * size;
+
+        if(x%2 == 0)
+        {
+            result.y += size/2;
+        }
+
         return result;
     }
 
