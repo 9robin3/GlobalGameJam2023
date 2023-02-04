@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Event : GameState
+public class SelectionState : GameState
 {
     public void GameStateStart()
     {
@@ -13,4 +13,5 @@ public class Event : GameState
     {
         throw new System.NotImplementedException();
     }
+
 }

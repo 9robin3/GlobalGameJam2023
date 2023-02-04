@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     GameState currentGameState;
 
+    
 
     void changeState(GameState newGameState)
     {
