@@ -9,6 +9,8 @@ public class HexCell : MonoBehaviour
 {
     public HexSide[] hexSides;
 
+    public float size;
+
     public HexCell()
     {
         hexSides = new HexSide[6];
