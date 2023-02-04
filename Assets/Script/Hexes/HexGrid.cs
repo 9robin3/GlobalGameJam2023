@@ -10,11 +10,13 @@ public class HexGrid : MonoBehaviour
     int sizeX;
     [SerializeField]
     int sizeY;
+    [SerializeField]
+    float hexSize;
 
     [SerializeField]
-    HexCell defaultHexCell;
+    Hex defaultHexCell;
 
-    HexCell[][] hexCells;
+    Hex[][] hexCells;
 
     public HexGrid()
     {
@@ -25,11 +27,10 @@ public class HexGrid : MonoBehaviour
     static void UpdateGrid()
     {
         //Destroy old cells
-        HexCell[] tempCells = FindObjectsOfType<HexCell>();
-        Debug.Log(tempCells.Length);
+        Hex[] tempCells = FindObjectsOfType<Hex>();
         for (int i = 0; i < tempCells.Length; i++)
         {
-            DestroyImmediate(tempCells[i]);
+            DestroyImmediate(tempCells[i], true);
         }
 
         //Make new cells
@@ -43,15 +44,15 @@ public class HexGrid : MonoBehaviour
         {
             for (int i = 0; i < tempGrids.Length; i++)
             {
-                tempGrids[i].hexCells = new HexCell[tempGrids[i].sizeX][];
+                tempGrids[i].hexCells = new Hex[tempGrids[i].sizeX][];
                 for (int j = 0; j < tempGrids[i].sizeX; j++)
                 {
-                    tempGrids[i].hexCells[j] = new HexCell[tempGrids[i].sizeY];
+                    tempGrids[i].hexCells[j] = new Hex[tempGrids[i].sizeY];
                     for (int k = 0; k < tempGrids[i].sizeY; k++)
                     {
                         tempGrids[i].hexCells[j][k] = Instantiate(tempGrids[i].defaultHexCell, tempGrids[i].transform);
                         Instantiate(tempGrids[i].hexCells[j][k].background, tempGrids[i].hexCells[j][k].transform);
-                        tempGrids[i].hexCells[j][k].transform.localPosition = GivePosition(j, k, tempGrids[i].hexCells[j][k].size);
+                        tempGrids[i].hexCells[j][k].transform.localPosition = GivePosition(j, k, tempGrids[i].hexSize);
                     }
                 }
             }
