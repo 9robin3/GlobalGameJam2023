@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
+using Settworks.Hexagons;
 
 public class HexGrid : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class HexGrid : MonoBehaviour
     [SerializeField]
     Hex defaultHexCell;
 
-    Hex[][] hexCells;
+    public Hex[][] hexCells;
 
     public HexGrid()
     {
@@ -30,6 +31,7 @@ public class HexGrid : MonoBehaviour
         Hex[] tempCells = FindObjectsOfType<Hex>();
         for (int i = 0; i < tempCells.Length; i++)
         {
+            Debug.Log("cool");
             DestroyImmediate(tempCells[i], true);
         }
 
@@ -51,28 +53,21 @@ public class HexGrid : MonoBehaviour
                     for (int k = 0; k < tempGrids[i].sizeY; k++)
                     {
                         tempGrids[i].hexCells[j][k] = Instantiate(tempGrids[i].defaultHexCell, tempGrids[i].transform);
-                        Instantiate(tempGrids[i].hexCells[j][k].background, tempGrids[i].hexCells[j][k].transform);
-                        tempGrids[i].hexCells[j][k].transform.localPosition = GivePosition(j, k, tempGrids[i].hexSize);
+                        tempGrids[i].hexCells[j][k].hexCoord = new HexCoord(j, k);
+                        tempGrids[i].hexCells[j][k].parent = tempGrids[i];
+                        Vector3 vector3 = new Vector3(j * tempGrids[i].hexSize, k * tempGrids[i].hexSize);
+                        if (k % 2 == 0)
+                        {
+                            vector3.x += tempGrids[i].hexSize /2;
+                        }
+                        tempGrids[i].hexCells[j][k].transform.position = vector3;
+                        Debug.Log(tempGrids[i].hexCells[j][k].hexCoord.q);
+                        Debug.Log(tempGrids[i].hexCells[j][k].hexCoord.r);
                     }
                 }
             }
         }
         
-    }
-
-    static Vector3 GivePosition(float x, float y, float size)
-    {
-        Vector3 result = new Vector3();
-
-        result.x = x * size;
-        result.y = y * size;
-
-        if(x%2 == 0)
-        {
-            result.y += size/2;
-        }
-
-        return result;
     }
 
     // Start is called before the first frame update

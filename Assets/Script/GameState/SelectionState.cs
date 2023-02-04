@@ -13,17 +13,15 @@ public class SelectionState : GameState
     {
         if(Input.GetMouseButtonDown(0))
         {
-            //Debug.Log("hit");
             RaycastHit ray = new RaycastHit();
 
             bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out ray);
 
             if(hit) 
             {
-                Debug.Log("hit");
                 if (ray.transform.gameObject.tag == "Hex")
                 {
-                    Debug.Log("selected");
+                    ray.transform.gameObject.GetComponent<Hex>().ActivateNeighbors();
                 }
                 
             }
