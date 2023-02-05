@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public enum Ingridient {empty, Random, gravel, vanilla, water, camomille, mushroom, chicory, honey, Tapioca };
+public enum Ingridient {empty, random, gravel, vanilla, water, camomille, mushroom, chicory, honey, Tapioca };
 
 public class GameManager : MonoBehaviour
 {
@@ -55,6 +55,39 @@ public class GameManager : MonoBehaviour
         {
             case Ingridient.empty:
                 //Do nothing
+                break;
+            case Ingridient.random:
+                int random = Random.Range(0, 9);
+                switch(random)
+                {
+                    case 0:
+                        gravel++;
+                        break;
+                    case 1:
+                        vanilla++;
+                        break;
+                    case 2:
+                        water++;
+                        break;
+                    case 3: 
+                        camomille++; 
+                        break;
+                    case 4:
+                        tapioca++;
+                        break;
+                    case 5: 
+                        chicory++;
+                        break;
+                    case 6: 
+                        honey++;
+                        break;
+                    case 7:
+                        mushroom++;
+                        break;
+                    case 8:
+                        tapioca++;
+                        break;
+                }
                 break;
             case Ingridient.gravel:
                 gravel++;
