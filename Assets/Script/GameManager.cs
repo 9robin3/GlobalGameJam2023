@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public enum Ingridient { gravel, vanilla};
+public enum Ingridient {empty, Random, gravel, vanilla, water, camomille, mushroom, chicory, honey, Tapioca };
 
 public class GameManager : MonoBehaviour
 {
@@ -22,6 +22,15 @@ public class GameManager : MonoBehaviour
 
     public Button button;
 
+    int gravel;
+    int vanilla;
+    int water;
+    int camomille;
+    int mushroom;
+    int chicory;
+    int honey;
+    int tapioca;
+
     public void changeState(GameState newGameState)
     {
         currentGameState = newGameState;
@@ -38,6 +47,40 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         Application.LoadLevel(Application.loadedLevel);
+    }
+
+    public void AddIngridient(Ingridient ingridien)
+    {
+        switch(ingridien)
+        {
+            case Ingridient.empty:
+                //Do nothing
+                break;
+            case Ingridient.gravel:
+                gravel++;
+                break; 
+            case Ingridient.vanilla:
+                vanilla++;
+                break;
+            case Ingridient.water:
+                water++;
+                break;
+            case Ingridient.camomille:
+                camomille++;
+                break;
+            case Ingridient.chicory:
+                chicory++;
+                break;
+            case Ingridient.mushroom: 
+                mushroom++;
+                break;
+            case Ingridient.honey: 
+                honey++;
+                break;
+            case Ingridient.Tapioca:
+                tapioca++;
+                break;
+        }
     }
 
     // Start is called before the first frame update
