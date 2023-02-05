@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2471846808635919253}
   - component: {fileID: -173946850491911302}
   m_Layer: 0
-  m_Name: HexCell
+  m_Name: EmptyHexCell
   m_TagString: Hex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +101,8 @@ MonoBehaviour:
   hexObject: {fileID: 2978188618351697927, guid: c649341aa894f374abb78f48463c97e8,
     type: 3}
   parent: {fileID: 0}
+  open: 0
+  active: 0
 --- !u!135 &-173946850491911302
 SphereCollider:
   m_ObjectHideFlags: 0

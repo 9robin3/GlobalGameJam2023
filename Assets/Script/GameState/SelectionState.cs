@@ -21,7 +21,11 @@ public class SelectionState : GameState
             {
                 if (ray.transform.gameObject.tag == "Hex")
                 {
-                    ray.transform.gameObject.GetComponent<Hex>().ActivateNeighbors();
+                    Hex hex = ray.transform.gameObject.GetComponent<Hex>();
+                    if(hex.open && !hex.active)
+                    {
+                        hex.Activate();
+                    }
                 }
                 
             }
