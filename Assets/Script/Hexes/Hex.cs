@@ -5,9 +5,13 @@ using Unity.VisualScripting;
 
 public class Hex : MonoBehaviour
 {
-    //public HexCoord hexCoord { get; set; }
+    SpriteRenderer renderer;
 
-    public Sprite background;
+    public Sprite eventScreen;
+
+    public Sprite activeSprite;
+
+    public Sprite openSprite;
 
     public GameObject hexObject;
 
@@ -19,9 +23,12 @@ public class Hex : MonoBehaviour
 
     public bool active = false;
 
+    public Ingridient ingridient;
+
     // Start is called before the first frame update
     void Start()
     {
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -79,11 +86,12 @@ public class Hex : MonoBehaviour
     {
         OpenNeighbors();
         active = true;
+        renderer.sprite = activeSprite;
     }
 
     public void Open()
     {
-        Instantiate(hexObject, transform);
         open = true;
+        renderer.sprite = openSprite;
     }
 }

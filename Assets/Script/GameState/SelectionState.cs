@@ -33,8 +33,7 @@ public class SelectionState : GameState
                     {
                         hex.Activate();
                         manager.currentMoves--;
-                        HexEvent newEvent = new HexEvent();
-                        manager.StartEvent(newEvent);
+                        manager.StartEvent(hex.eventScreen);
 
                     }
                 }
