@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class SelectionState : GameState
 {
+    GameManager manager;
+
+    public SelectionState(GameManager newManager)
+    {
+        manager = newManager;
+    }
+
     public void GameStateStart()
     {
         
@@ -25,11 +32,14 @@ public class SelectionState : GameState
                     if(hex.open && !hex.active)
                     {
                         hex.Activate();
+                        manager.currentMoves--;
+                        HexEvent newEvent = new HexEvent();
+                        manager.StartEvent(newEvent);
+
                     }
                 }
                 
             }
         }
     }
-
 }

@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class Event : GameState
 {
+    GameManager manager;
+
+    public Event(GameManager newManager)
+    {
+        manager = newManager;
+    }
+
     public void GameStateStart()
     {
-        throw new System.NotImplementedException();
+        manager.eventCanvas.enabled = true;
+        manager.eventCanvas.GetComponent<SpriteRenderer>().sprite = manager.currentEvent.eventScreen;
     }
 
     public void GameStateUpdate()
     {
-        throw new System.NotImplementedException();
+        if(manager.currentMoves <= 0)
+        {
+            manager.eventCanvas.enabled = false;
+            manager.changeState(manager.endState);
+        }
+        else
+        {
+            Debug.Log("Event");
+            manager.changeState(manager.selectionState);
+        }
     }
 }

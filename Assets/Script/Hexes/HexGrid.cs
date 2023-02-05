@@ -72,58 +72,6 @@ public class HexGrid : MonoBehaviour
         
     }
 
-    //[MenuItem("GridUpdate/Update")]
-    //static void UpdateGrid()
-    //{
-    //    HexGrid[] tempGrids = FindObjectsOfType<HexGrid>();
-
-        
-    //    if (tempGrids.Length <= 0)
-    //    {
-    //        Debug.Log("No grid in scene");
-    //    }
-    //    else
-    //    {
-    //        for (int i = 0; i < tempGrids.Length; i++)
-    //        {
-    //            HexGrid currentGrid = tempGrids[i];
-
-    //            //Destroy old cells
-    //            Hex[] tempCells = currentGrid.GetComponentsInChildren<Hex>();
-    //            for (int j = 0; j < tempCells.Length; j++)
-    //            {
-    //                Debug.Log("cool");
-    //                DestroyImmediate(tempCells[j], true);
-    //            }
-
-    //            currentGrid.hexCells = new Hex[currentGrid.sizeX][];
-
-    //            //Make new cells
-    //            for (int j = 0; j < currentGrid.sizeX; j++)
-    //            {
-    //                currentGrid.hexCells[j] = new Hex[currentGrid.sizeY];
-
-    //                for (int k = 0; k < currentGrid.sizeY; k++)
-    //                {
-    //                    currentGrid.hexCells[j][k] = Instantiate(currentGrid.defaultHex, currentGrid.transform);
-    //                    currentGrid.hexCells[j][k].coord = new Coord(j, k);
-    //                    currentGrid.hexCells[j][k].parent = currentGrid;
-
-    //                    Vector3 vector3 = new Vector3(j * currentGrid.hexSize, k * currentGrid.hexSize);
-    //                    if (k % 2 == 0)
-    //                    {
-    //                        vector3.x += currentGrid.hexSize /2;
-    //                    }
-    //                    currentGrid.hexCells[j][k].transform.position = vector3;
-
-    //                    Debug.Log( "X " + currentGrid.hexCells[j][k].coord.x + " : Y " + currentGrid.hexCells[j][k].coord.y);
-    //                }
-    //            }
-    //        }
-    //    }
-        
-    //}
-
     public void MakeGrid()
     {
         hexCells = new Hex[sizeX][];
@@ -202,8 +150,6 @@ public class HexGrid : MonoBehaviour
                     vector3.x += hexSize / 2;
                 }
                 hexCells[j][k].transform.position = vector3;
-
-                Debug.Log("X " + hexCells[j][k].coord.x + " : Y " + hexCells[j][k].coord.y);
             }
         }
     }

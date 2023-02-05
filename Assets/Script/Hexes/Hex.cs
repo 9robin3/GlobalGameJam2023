@@ -78,7 +78,6 @@ public class Hex : MonoBehaviour
     public void Activate()
     {
         OpenNeighbors();
-        Debug.Log("Activated!");
         active = true;
     }
 
