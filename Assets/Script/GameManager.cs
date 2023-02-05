@@ -121,6 +121,7 @@ public class GameManager : MonoBehaviour
     {
         currentMoves = startMoves;
         eventCanvas.enabled = false;
+        eventCanvas.enabled = false;
         selectionState = new SelectionState(this);
         eventState= new Event(this);
         endState = new EndState(this);

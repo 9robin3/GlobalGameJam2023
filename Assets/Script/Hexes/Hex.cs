@@ -27,6 +27,10 @@ public class Hex : MonoBehaviour
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();
+        if(open)
+        {
+            renderer.sprite = openSprite;
+        }
     }
 
     // Update is called once per frame
