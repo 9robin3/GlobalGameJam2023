@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6966582888518404241}
   - component: {fileID: 3632605511723426963}
   m_Layer: 0
-  m_Name: TapiokaCell
+  m_Name: TapiokaCell 1
   m_TagString: Hex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   hexObject: {fileID: 2978188618351697927, guid: c649341aa894f374abb78f48463c97e8,
     type: 3}
   parent: {fileID: 0}
-  open: 0
+  open: 1
   active: 0
   ingridient: 0
 --- !u!212 &-6966582888518404241

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -6966582888518404241}
   - component: {fileID: 3632605511723426963}
   m_Layer: 0
-  m_Name: TapiokaCell
+  m_Name: HoneyCell 1
   m_TagString: Hex
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,13 +47,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8092523cb43778448583f3e72906134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventScreen: {fileID: 21300000, guid: 5583720e56be4a643a00220f613d494d, type: 3}
-  activeSprite: {fileID: 21300000, guid: 06a699bf364b6eb419bdb2a13773e8fa, type: 3}
+  eventScreen: {fileID: 21300000, guid: c971fc5bc801386409e65013e4f9bea4, type: 3}
+  activeSprite: {fileID: 21300000, guid: 261ba59180aff3e4fbf82e4370f826ff, type: 3}
   openSprite: {fileID: 21300000, guid: a12db508c97dc2d49b9a921f75a993b5, type: 3}
   hexObject: {fileID: 2978188618351697927, guid: c649341aa894f374abb78f48463c97e8,
     type: 3}
   parent: {fileID: 0}
-  open: 0
+  open: 1
   active: 0
   ingridient: 0
 --- !u!212 &-6966582888518404241
