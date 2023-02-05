@@ -4,14 +4,10 @@ using UnityEngine;
 
 public struct HexEvent
 {
-    public HexEvent(Sprite newScreen, int numberOfOptions, Ingridient newReward)
+    public HexEvent(Sprite newScreen, int numberOfOptions)
     {
         eventScreen = newScreen;
-        options = numberOfOptions;
-        reward = newReward;
     }
 
     public Sprite eventScreen;
-    public int options;
-    public Ingridient reward;
 }

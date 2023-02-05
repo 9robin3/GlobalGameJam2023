@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     public int currentMoves;
 
-    public HexEvent currentEvent;
+    public Sprite currentEvent;
 
     public Canvas eventCanvas;
 
@@ -28,11 +28,16 @@ public class GameManager : MonoBehaviour
         currentGameState.GameStateStart();
     }
 
-    public void StartEvent(HexEvent hexEvent)
+    public void StartEvent(Sprite eventSprite)
     {
-        currentEvent = hexEvent;
+        currentEvent = eventSprite;
         currentGameState = eventState;
         currentGameState.GameStateStart();
+    }
+
+    public void RestartGame()
+    {
+        Application.LoadLevel(Application.loadedLevel);
     }
 
     // Start is called before the first frame update
@@ -42,7 +47,7 @@ public class GameManager : MonoBehaviour
         eventCanvas.enabled = false;
         selectionState = new SelectionState(this);
         eventState= new Event(this);
-        endState = new EndState();
+        endState = new EndState(this);
         changeState(selectionState);
 
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Event : GameState
 {
@@ -14,20 +15,24 @@ public class Event : GameState
     public void GameStateStart()
     {
         manager.eventCanvas.enabled = true;
-        manager.eventCanvas.GetComponent<SpriteRenderer>().sprite = manager.currentEvent.eventScreen;
+        manager.eventCanvas.GetComponentInChildren<Image>().sprite = manager.currentEvent;
     }
 
     public void GameStateUpdate()
     {
-        if(manager.currentMoves <= 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            manager.eventCanvas.enabled = false;
-            manager.changeState(manager.endState);
-        }
-        else
-        {
-            Debug.Log("Event");
-            manager.changeState(manager.selectionState);
+            if (manager.currentMoves <= 0)
+            {
+                manager.eventCanvas.enabled = false;
+                manager.changeState(manager.endState);
+            }
+            else
+            {
+                manager.eventCanvas.enabled = false;
+                Debug.Log("Event");
+                manager.changeState(manager.selectionState);
+            }
         }
     }
 }
