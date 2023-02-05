@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
-using Settworks.Hexagons;
 
 public class HexGrid : MonoBehaviour
 {

@@ -50,8 +50,6 @@ MonoBehaviour:
   eventScreen: {fileID: 0}
   activeSprite: {fileID: 0}
   openSprite: {fileID: 21300000, guid: a3fb0f7d37a31b146bf0a2ea8f4d77b9, type: 3}
-  hexObject: {fileID: 2978188618351697927, guid: c649341aa894f374abb78f48463c97e8,
-    type: 3}
   parent: {fileID: 0}
   open: 0
   active: 0
@@ -96,8 +94,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 2f84747c1d2cbbf4c91ee7be22c16cf6, type: 3}
+  m_SortingOrder: 4
+  m_Sprite: {fileID: 21300000, guid: 96c09ddc55c7aa24c8c735830dc5a38b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
