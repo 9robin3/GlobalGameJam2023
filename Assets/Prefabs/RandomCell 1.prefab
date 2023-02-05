@@ -50,12 +50,10 @@ MonoBehaviour:
   eventScreen: {fileID: 0}
   activeSprite: {fileID: 0}
   openSprite: {fileID: 0}
-  hexObject: {fileID: 2978188618351697927, guid: c649341aa894f374abb78f48463c97e8,
-    type: 3}
   parent: {fileID: 0}
   open: 1
   active: 0
-  ingridient: 0
+  ingridient: 1
 --- !u!212 &-6966582888518404241
 SpriteRenderer:
   m_ObjectHideFlags: 0

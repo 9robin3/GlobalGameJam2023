@@ -13,8 +13,6 @@ public class Hex : MonoBehaviour
 
     public Sprite openSprite;
 
-    public GameObject hexObject;
-
     public HexGrid parent;
 
     public Coord coord;
@@ -91,7 +89,10 @@ public class Hex : MonoBehaviour
 
     public void Open()
     {
-        open = true;
-        renderer.sprite = openSprite;
+        if(!open)
+        {
+            open = true;
+            renderer.sprite = openSprite;
+        }
     }
 }

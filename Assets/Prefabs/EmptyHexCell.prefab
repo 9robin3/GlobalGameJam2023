@@ -49,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventScreen: {fileID: 21300000, guid: 140d7ca6066b6564e88f6776f2a93ea6, type: 3}
-  activeSprite: {fileID: 21300000, guid: 140d7ca6066b6564e88f6776f2a93ea6, type: 3}
-  openSprite: {fileID: 0}
+  activeSprite: {fileID: 21300000, guid: 2f84747c1d2cbbf4c91ee7be22c16cf6, type: 3}
+  openSprite: {fileID: 21300000, guid: a12db508c97dc2d49b9a921f75a993b5, type: 3}
   hexObject: {fileID: 2978188618351697927, guid: c649341aa894f374abb78f48463c97e8,
     type: 3}
   parent: {fileID: 0}
