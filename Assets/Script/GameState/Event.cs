@@ -20,7 +20,7 @@ public class Event : GameState
 
     public void GameStateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetMouseButtonDown(0))
         {
             if (manager.currentMoves <= 0)
             {

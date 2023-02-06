@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventScreen: {fileID: 21300000, guid: c971fc5bc801386409e65013e4f9bea4, type: 3}
-  activeSprite: {fileID: 21300000, guid: c5e935ef730def6469be1e9d6bc8e4ea, type: 3}
+  activeSprite: {fileID: 21300000, guid: ebb9458db95c1fb41bb937c5525feeb1, type: 3}
   openSprite: {fileID: 21300000, guid: 261ba59180aff3e4fbf82e4370f826ff, type: 3}
   parent: {fileID: 0}
   open: 1
