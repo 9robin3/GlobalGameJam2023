@@ -7,8 +7,6 @@ public class Hex : MonoBehaviour
 {
     SpriteRenderer renderer;
 
-    public Sprite eventScreen;
-
     public Sprite activeSprite;
 
     public Sprite openSprite;
@@ -23,7 +21,7 @@ public class Hex : MonoBehaviour
 
     public Ingridient ingridient;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame updat
     void Start()
     {
         renderer = GetComponent<SpriteRenderer>();

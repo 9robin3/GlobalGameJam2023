@@ -3,24 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public enum Ingridient {empty, random, gravel, vanilla, water, camomille, mushroom, chicory, honey, Tapioca };
+public enum Ingridient {empty, random, gravel, vanilla, water, camomille, mushroom, chicory, honey, tapioca };
 
 public class GameManager : MonoBehaviour
 {
     GameState currentGameState;
-    public SelectionState selectionState;
-    public Event eventState;
+    public SelectionState selectionState { get; private set; }
+    public Event eventState { get; private set; }
     public EndState endState { get; private set; }
 
     public int startMoves;
 
     public int currentMoves;
 
-    public Sprite currentEvent;
+    //public Sprite currentEventSprite;
 
     public Canvas eventCanvas;
 
     public Button button;
+
+    public MusicManager musicManager;
+
+    public Sprite camomilleSprite;
+    public Sprite mushroomSprite;
+    public Sprite chicorySprite;
+    public Sprite honeySprite;
+    public Sprite tapiocaSprite;
+    public Sprite gravelSprite;
+    public Sprite vanillaSprite;
+    public Sprite waterSprite;
+
 
     int gravel;
     int vanilla;
@@ -31,16 +43,9 @@ public class GameManager : MonoBehaviour
     int honey;
     int tapioca;
 
-    public void changeState(GameState newGameState)
+    public void ChangeState(GameState newGameState)
     {
         currentGameState = newGameState;
-        currentGameState.GameStateStart();
-    }
-
-    public void StartEvent(Sprite eventSprite)
-    {
-        currentEvent = eventSprite;
-        currentGameState = eventState;
         currentGameState.GameStateStart();
     }
 
@@ -57,35 +62,40 @@ public class GameManager : MonoBehaviour
                 //Do nothing
                 break;
             case Ingridient.random:
-                int random = Random.Range(0, 9);
+                int random = Random.Range(0, 8);
                 switch(random)
                 {
                     case 0:
                         gravel++;
+                        ingridien = Ingridient.gravel;
                         break;
                     case 1:
                         vanilla++;
+                        ingridien = Ingridient.vanilla;
                         break;
                     case 2:
                         water++;
+                        ingridien = Ingridient.water;
                         break;
                     case 3: 
                         camomille++; 
+                        ingridien = Ingridient.camomille;
                         break;
                     case 4:
                         tapioca++;
+                        ingridien = Ingridient.tapioca;
                         break;
                     case 5: 
                         chicory++;
+                        ingridien = Ingridient.chicory;
                         break;
                     case 6: 
                         honey++;
+                        ingridien = Ingridient.honey;
                         break;
                     case 7:
                         mushroom++;
-                        break;
-                    case 8:
-                        tapioca++;
+                        ingridien = Ingridient.mushroom;
                         break;
                 }
                 break;
@@ -110,9 +120,15 @@ public class GameManager : MonoBehaviour
             case Ingridient.honey: 
                 honey++;
                 break;
-            case Ingridient.Tapioca:
+            case Ingridient.tapioca:
                 tapioca++;
                 break;
+        }
+
+        if(ingridien != Ingridient.empty)
+        {
+            eventState.ingridient = ingridien;
+            ChangeState(eventState);
         }
     }
 
@@ -121,11 +137,11 @@ public class GameManager : MonoBehaviour
     {
         currentMoves = startMoves;
         eventCanvas.enabled = false;
-        eventCanvas.enabled = false;
         selectionState = new SelectionState(this);
         eventState= new Event(this);
         endState = new EndState(this);
-        changeState(selectionState);
+        ChangeState(selectionState);
+        musicManager = GetComponent<MusicManager>();
 
     }
 

@@ -34,11 +34,11 @@ public class SelectionState : GameState
                         hex.Activate();
                         manager.currentMoves--;
                         manager.AddIngridient(hex.ingridient);
-                        if (hex.ingridient != Ingridient.empty)
-                        {
-                            Debug.Log(hex.ingridient);
-                            manager.StartEvent(hex.eventScreen);
-                        }
+                        //if (hex.ingridient != Ingridient.empty)
+                        //{
+                        //    Debug.Log(hex.ingridient);
+                        //    manager.StartEvent(hex.eventScreen);
+                        //}
                     }
                 }
                 
