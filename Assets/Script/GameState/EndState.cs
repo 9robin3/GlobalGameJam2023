@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndState : GameState
 {
@@ -9,6 +11,7 @@ public class EndState : GameState
     float cameraSpeed = 3.0f;
     float movementDistance = 20;
     float currentMove;
+    float mamaReactionTime = 0;
 
     public EndState(GameManager manager)
     {
@@ -18,7 +21,6 @@ public class EndState : GameState
     public void GameStateStart()
     {
         currentMove = 0;
-        Debug.Log("Game Over");
     }
 
     public void GameStateUpdate()
@@ -30,10 +32,61 @@ public class EndState : GameState
         }
         else
         {
-            manager.RestartGame();
+            if(!manager.endTextCanvas.enabled)
+            {
+                manager.endTextCanvas.enabled = true;
+                manager.endTextCanvas.GetComponentInChildren<TextMeshProUGUI>().text = MamaReaction();
+            }
+
+            if(Input.GetMouseButtonDown(0))
+            {
+                manager.RestartGame();
+            }
+            
+        }
+    }
+
+    public string MamaReaction() 
+    {
+        string reaction = "This tea is";
+
+        if(manager.water <= 0) 
+        {
+            reaction += " very dry";
+        }
+        else
+        {
+            if(manager.mushroom > 0)
+            {
+                reaction += " silly";
+            }
+            if(manager.chicory > 0)
+            {
+                reaction += " nutty";
+            }
+            if(manager.honey > 0)
+            {
+                reaction += " sweet";
+            }
+            if(manager.tapioca > 0)
+            {
+                reaction += " chewy";
+            }
+            if(manager.camomille > 0)
+            {
+                reaction += " soothing";
+            }
+            if(manager.gravel > 0)
+            {
+                reaction += " crunchy";
+            }
+            if(manager.vanilla > 0)
+            {
+                reaction += "nilla";
+            }
         }
 
-
-        
+        reaction += "!";
+        return reaction;
     }
 }

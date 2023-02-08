@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
 
     public Canvas eventCanvas;
 
+    public Canvas endTextCanvas;
+
     public Button button;
 
     public MusicManager musicManager;
@@ -34,14 +36,14 @@ public class GameManager : MonoBehaviour
     public Sprite waterSprite;
 
 
-    int gravel;
-    int vanilla;
-    int water;
-    int camomille;
-    int mushroom;
-    int chicory;
-    int honey;
-    int tapioca;
+    public int gravel;
+    public int vanilla;
+    public int water;
+    public int camomille;
+    public int mushroom;
+    public int chicory;
+    public int honey;
+    public int tapioca;
 
     public void ChangeState(GameState newGameState)
     {
@@ -137,6 +139,7 @@ public class GameManager : MonoBehaviour
     {
         currentMoves = startMoves;
         eventCanvas.enabled = false;
+        endTextCanvas.enabled = false;
         selectionState = new SelectionState(this);
         eventState= new Event(this);
         endState = new EndState(this);
