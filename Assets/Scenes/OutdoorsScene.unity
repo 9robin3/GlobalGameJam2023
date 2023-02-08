@@ -1346,6 +1346,109 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1557315294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8916679303724723299, guid: 2eb0e2c9d3c2cec43b18b142f9e564ae,
+    type: 3}
+  m_PrefabInstance: {fileID: 8916679304994378429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1557315299
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557315294}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 354cf860ccfb68642a19d41194537ac4,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: bfdbd259a5a7aa44a99aa864d64432db, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1753406700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2215,9 +2318,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
+      propertyPath: hexes0.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
       propertyPath: hexes0.Array.data[9]
       value: 
       objectReference: {fileID: 4810004429978930026, guid: 8b53f7653a4754747b253a2a547d7f7c,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
+      propertyPath: hexes1.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
@@ -2227,9 +2342,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
+      propertyPath: hexes2.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
       propertyPath: hexes2.Array.data[9]
       value: 
       objectReference: {fileID: 2471846808635919253, guid: 20b275c6edb5c4f4b8563734ca9af8f1,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
+      propertyPath: hexes3.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
@@ -2239,9 +2366,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
+      propertyPath: hexes4.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
       propertyPath: hexes4.Array.data[9]
       value: 
       objectReference: {fileID: 2471846808635919253, guid: 20b275c6edb5c4f4b8563734ca9af8f1,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
+      propertyPath: hexes5.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
@@ -2251,9 +2390,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
+      propertyPath: hexes6.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
       propertyPath: hexes6.Array.data[9]
       value: 
       objectReference: {fileID: 4810004429978930026, guid: 9343e7c6c818c6046abf326a2f96eb11,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
+      propertyPath: hexes7.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
@@ -2263,9 +2414,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
+      propertyPath: hexes8.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
       propertyPath: hexes8.Array.data[9]
       value: 
       objectReference: {fileID: 2471846808635919253, guid: 20b275c6edb5c4f4b8563734ca9af8f1,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
+      propertyPath: hexes9.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
@@ -2275,9 +2438,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
+      propertyPath: hexes10.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
       propertyPath: hexes10.Array.data[9]
       value: 
       objectReference: {fileID: 2471846808635919253, guid: 20b275c6edb5c4f4b8563734ca9af8f1,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
+      propertyPath: hexes11.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
@@ -2287,9 +2462,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
+      propertyPath: hexes12.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
       propertyPath: hexes12.Array.data[9]
       value: 
       objectReference: {fileID: 2471846808635919253, guid: 20b275c6edb5c4f4b8563734ca9af8f1,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
+      propertyPath: hexes13.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
@@ -2299,9 +2486,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
+      propertyPath: hexes14.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
       propertyPath: hexes14.Array.data[9]
       value: 
       objectReference: {fileID: 4810004429978930026, guid: 9343e7c6c818c6046abf326a2f96eb11,
+        type: 3}
+    - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
+        type: 3}
+      propertyPath: hexes15.Array.data[0]
+      value: 
+      objectReference: {fileID: 595468488766274583, guid: 5e066a350e4ca1343b01f2848e6a9d24,
         type: 3}
     - target: {fileID: 8080477916775931913, guid: 226c59c9eb9ab8249a84ea951ebd52c4,
         type: 3}
@@ -2328,6 +2527,12 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: a7c055838b5ff0b459f074691df97d43, type: 3}
+    - target: {fileID: 1838630051818711088, guid: 2eb0e2c9d3c2cec43b18b142f9e564ae,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5150541313398597049, guid: 354cf860ccfb68642a19d41194537ac4,
+        type: 2}
     - target: {fileID: 8916679303724723292, guid: 2eb0e2c9d3c2cec43b18b142f9e564ae,
         type: 3}
       propertyPath: BobaMusic

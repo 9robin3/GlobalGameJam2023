@@ -48,13 +48,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8092523cb43778448583f3e72906134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eventScreen: {fileID: 21300000, guid: c971fc5bc801386409e65013e4f9bea4, type: 3}
   activeSprite: {fileID: 21300000, guid: ebb9458db95c1fb41bb937c5525feeb1, type: 3}
   openSprite: {fileID: 21300000, guid: 96c09ddc55c7aa24c8c735830dc5a38b, type: 3}
   parent: {fileID: 0}
   open: 1
   active: 0
-  ingridient: 0
+  ingridient: 8
 --- !u!212 &-6966582888518404241
 SpriteRenderer:
   m_ObjectHideFlags: 0

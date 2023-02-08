@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public enum Ingridient {empty, random, gravel, vanilla, water, camomille, mushroom, chicory, honey, tapioca };
@@ -15,8 +16,6 @@ public class GameManager : MonoBehaviour
     public int startMoves;
 
     public int currentMoves;
-
-    //public Sprite currentEventSprite;
 
     public Canvas eventCanvas;
 
@@ -35,15 +34,14 @@ public class GameManager : MonoBehaviour
     public Sprite vanillaSprite;
     public Sprite waterSprite;
 
-
-    public int gravel;
-    public int vanilla;
-    public int water;
-    public int camomille;
-    public int mushroom;
-    public int chicory;
-    public int honey;
-    public int tapioca;
+    public int gravel { get; private set; }
+    public int vanilla { get; private set; }
+    public int water { get; private set; }
+    public int camomille { get; private set; }
+    public int mushroom { get; private set; }
+    public int chicory { get; private set; }
+    public int honey { get; private set; }
+    public int tapioca { get; private set; }
 
     public void ChangeState(GameState newGameState)
     {
@@ -53,7 +51,8 @@ public class GameManager : MonoBehaviour
 
     public void RestartGame()
     {
-        Application.LoadLevel(Application.loadedLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //Application.LoadLevel(Application.loadedLevel);
     }
 
     public void AddIngridient(Ingridient ingridien)
@@ -137,6 +136,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        musicManager = GetComponent<MusicManager>();
         currentMoves = startMoves;
         eventCanvas.enabled = false;
         endTextCanvas.enabled = false;
@@ -144,8 +144,6 @@ public class GameManager : MonoBehaviour
         eventState= new Event(this);
         endState = new EndState(this);
         ChangeState(selectionState);
-        musicManager = GetComponent<MusicManager>();
-
     }
 
     // Update is called once per frame

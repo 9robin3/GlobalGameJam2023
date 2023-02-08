@@ -5,7 +5,7 @@ using Unity.VisualScripting;
 
 public class Hex : MonoBehaviour
 {
-    SpriteRenderer renderer;
+    SpriteRenderer spriteRenderer;
 
     public Sprite activeSprite;
 
@@ -24,10 +24,10 @@ public class Hex : MonoBehaviour
     // Start is called before the first frame updat
     void Start()
     {
-        renderer = GetComponent<SpriteRenderer>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         if(open)
         {
-            renderer.sprite = openSprite;
+            spriteRenderer.sprite = openSprite;
         }
     }
 
@@ -86,7 +86,7 @@ public class Hex : MonoBehaviour
     {
         OpenNeighbors();
         active = true;
-        renderer.sprite = activeSprite;
+        spriteRenderer.sprite = activeSprite;
     }
 
     public void Open()
@@ -94,7 +94,7 @@ public class Hex : MonoBehaviour
         if(!open)
         {
             open = true;
-            renderer.sprite = openSprite;
+            spriteRenderer.sprite = openSprite;
         }
     }
 }

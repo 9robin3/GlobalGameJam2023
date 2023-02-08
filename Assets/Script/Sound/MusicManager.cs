@@ -14,49 +14,59 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioClip vanillaMusic;
     [SerializeField] AudioClip waterMusic;
 
-    AudioSource audioSource;
+    AudioSource mainAudioSource;
+    AudioSource clipAudioSource;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-
-        audioSource.Play();
+        AudioSource[] audioSources = GetComponents<AudioSource>();
+        if (audioSources[0].playOnAwake)
+        {
+            mainAudioSource = audioSources[0];
+            clipAudioSource = audioSources[1];
+        }
+        else 
+        {
+            mainAudioSource = audioSources[1];
+            clipAudioSource = audioSources[0];
+        }
     }
 
     public void PlayEventMusic(Ingridient ingridient)
     {
-        audioSource.Pause();
+        //mainAudioSource.Pause();
+        clipAudioSource.Stop();
 
         switch (ingridient)
         {
             case Ingridient.camomille:
-                audioSource.PlayOneShot(camomilleMusic);
+                clipAudioSource.PlayOneShot(camomilleMusic);
                 break;
             case Ingridient.chicory:
-                audioSource.PlayOneShot(chicoryMusic);
+                clipAudioSource.PlayOneShot(chicoryMusic);
                 break;
             case Ingridient.honey:
-                audioSource.PlayOneShot(honeyMusic);
+                clipAudioSource.PlayOneShot(honeyMusic);
                 break;
             case Ingridient.mushroom:
-                audioSource.PlayOneShot(mushroomMusic);
+                clipAudioSource.PlayOneShot(mushroomMusic);
                 break;
             case Ingridient.gravel:
-                audioSource.PlayOneShot(gravelMusic);
+                clipAudioSource.PlayOneShot(gravelMusic);
                 break;
             case Ingridient.empty:
                 break;
             case Ingridient.random:
                 break;
             case Ingridient.tapioca:
-                audioSource.PlayOneShot(bobaMusic);
+                clipAudioSource.PlayOneShot(bobaMusic);
                 break;
             case Ingridient.vanilla:
-                audioSource.PlayOneShot(vanillaMusic);
+                clipAudioSource.PlayOneShot(vanillaMusic);
                 break;
             case Ingridient.water:
-                audioSource.PlayOneShot(waterMusic);
+                clipAudioSource.PlayOneShot(waterMusic);
                 break;
             default:
                 break;
@@ -66,9 +76,9 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!audioSource.isPlaying)
-        {
-            audioSource.UnPause();
-        }
+        //if(!clipAudioSource.isPlaying)
+        //{
+        //    mainAudioSource.UnPause();
+        //}
     }
 }
