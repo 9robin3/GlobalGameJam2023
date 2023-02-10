@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.VisualScripting;
+using UnityEngine.VFX;
 
 public class Hex : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class Hex : MonoBehaviour
 
     public Ingridient ingridient;
 
+    VisualEffect visualEffect;
+    AudioSource audioSource;
+
     // Start is called before the first frame updat
     void Start()
     {
@@ -29,6 +33,9 @@ public class Hex : MonoBehaviour
         {
             spriteRenderer.sprite = openSprite;
         }
+
+        visualEffect = GetComponent<VisualEffect>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -87,6 +94,8 @@ public class Hex : MonoBehaviour
         OpenNeighbors();
         active = true;
         spriteRenderer.sprite = activeSprite;
+        visualEffect.Play();
+        audioSource.Play();
     }
 
     public void Open()

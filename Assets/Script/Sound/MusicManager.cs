@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class MusicManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class MusicManager : MonoBehaviour
     [SerializeField] AudioClip mushroomMusic;
     [SerializeField] AudioClip vanillaMusic;
     [SerializeField] AudioClip waterMusic;
+    [SerializeField] AudioClip upToMamaBear;
 
     AudioSource mainAudioSource;
     AudioSource clipAudioSource;
@@ -35,7 +37,6 @@ public class MusicManager : MonoBehaviour
 
     public void PlayEventMusic(Ingridient ingridient)
     {
-        //mainAudioSource.Pause();
         clipAudioSource.Stop();
 
         switch (ingridient)
@@ -73,12 +74,14 @@ public class MusicManager : MonoBehaviour
         }
     }
 
+    public void EndStateSound()
+    {
+        clipAudioSource.PlayOneShot(upToMamaBear);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        //if(!clipAudioSource.isPlaying)
-        //{
-        //    mainAudioSource.UnPause();
-        //}
+
     }
 }

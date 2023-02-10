@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 1750.9971, g: 1832.0078, b: 2658.5078, a: 1}
+  m_IndirectSpecularColor: {r: 1752.6328, g: 1834.8496, b: 2665.9023, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -751,7 +751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5583720e56be4a643a00220f613d494d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -911,7 +911,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2570,9 +2570,24 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 37b85cbede0595d4db9a59b59305c9f3, type: 3}
     - target: {fileID: 8916679303724723292, guid: 2eb0e2c9d3c2cec43b18b142f9e564ae,
         type: 3}
+      propertyPath: upToMamaBear
+      value: 
+      objectReference: {fileID: 8300000, guid: d70831080124e3147a80ea69b09a0c84, type: 3}
+    - target: {fileID: 8916679303724723292, guid: 2eb0e2c9d3c2cec43b18b142f9e564ae,
+        type: 3}
       propertyPath: vanillaMusic
       value: 
       objectReference: {fileID: 8300000, guid: 82c1ef4d3ada7294f94879857dfa5cc2, type: 3}
+    - target: {fileID: 8916679303724723292, guid: 2eb0e2c9d3c2cec43b18b142f9e564ae,
+        type: 3}
+      propertyPath: mamaBearDrink
+      value: 
+      objectReference: {fileID: 8300000, guid: b27ab670af735fe4c825d3258be8c82e, type: 3}
+    - target: {fileID: 8916679303724723292, guid: 2eb0e2c9d3c2cec43b18b142f9e564ae,
+        type: 3}
+      propertyPath: mamaBearSpeak
+      value: 
+      objectReference: {fileID: 8300000, guid: fedc4def74f79a643887ad4a63fce747, type: 3}
     - target: {fileID: 8916679303724723292, guid: 2eb0e2c9d3c2cec43b18b142f9e564ae,
         type: 3}
       propertyPath: mushroomMusic

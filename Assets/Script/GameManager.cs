@@ -13,17 +13,18 @@ public class GameManager : MonoBehaviour
     public Event eventState { get; private set; }
     public EndState endState { get; private set; }
 
-    public int startMoves;
+    [SerializeField]
+    int startMoves;
 
-    public int currentMoves;
+    public int currentMoves { get; private set; }
 
     public Canvas eventCanvas;
 
     public Canvas endTextCanvas;
 
-    public Button button;
+    //public Button button;
 
-    public MusicManager musicManager;
+    public MusicManager musicManager { get; private set; }
 
     public Sprite camomilleSprite;
     public Sprite mushroomSprite;
@@ -52,7 +53,6 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        //Application.LoadLevel(Application.loadedLevel);
     }
 
     public void AddIngridient(Ingridient ingridien)
@@ -125,6 +125,8 @@ public class GameManager : MonoBehaviour
                 tapioca++;
                 break;
         }
+
+        currentMoves--;
 
         if(ingridien != Ingridient.empty)
         {

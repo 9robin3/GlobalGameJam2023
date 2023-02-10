@@ -32,7 +32,6 @@ public class SelectionState : GameState
                     if(hex.open && !hex.active)
                     {
                         hex.Activate();
-                        manager.currentMoves--;
                         manager.AddIngridient(hex.ingridient);
                     }
                 }

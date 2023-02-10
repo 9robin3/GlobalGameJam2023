@@ -10,7 +10,7 @@ public class EndState : GameState
 
     float cameraSpeed = 3.0f;
     float movementDistance = 20;
-    float currentMove;
+    float currentMove = 0;
     float mamaReactionTime = 0;
 
     public EndState(GameManager manager)
@@ -20,7 +20,7 @@ public class EndState : GameState
 
     public void GameStateStart()
     {
-        currentMove = 0;
+        manager.musicManager.EndStateSound();
     }
 
     public void GameStateUpdate()
